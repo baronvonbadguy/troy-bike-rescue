@@ -1,0 +1,144 @@
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,700,300);
+@import url(http://fonts.googleapis.com/css?family=Tinos:400italic|Karma:300,400,500,600,700);
+html {
+  width: 100%;
+  height: 100%;
+  background-color: gray;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/156296/troy-bike-rescue-background.jpg.jpg");
+  -webkit-background-size: cover;
+  background-size: cover;
+  padding: 0 0;
+}
+html body {
+  background: transparent;
+}
+
+nav {
+  position: absolute;
+  z-index: 1;
+  margin-top: 5px;
+  margin-left: -20px;
+}
+
+.main {
+  margin-top: 10%;
+}
+
+.tab {
+  font-family: Tinos, Times-Roman, serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.05em;
+}
+.tab a {
+  color: ivory;
+  letter-spacing: 2px;
+  line-height: 1.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: margin-left 0.3s ease-in-out;
+  transition: margin-left 0.3s ease-in-out;
+}
+.tab a.active {
+  color: #eb2424;
+  margin-left: 20px;
+  -webkit-transition: margin-left 0.3s ease-in-out;
+  transition: margin-left 0.3s ease-in-out;
+}
+.tab a:hover {
+  color: #eb2424;
+  -webkit-transition: color 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out;
+}
+
+.logo-container {
+  margin: 0 auto;
+  margin-top: 100px;
+  padding: 20px;
+  background-color: #eb2424;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-shadow: 0px 2px 0px rgba(113, 18, 32, 0.6);
+}
+@media only screen and (max-width: 640px) {
+  .logo-container {
+    -webkit-transition: width 0.3s ease-out;
+    transition: width 0.3s ease-out;
+    -webkit-transition: height 0.3s ease-in;
+    transition: height 0.3s ease-in;
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+  }
+}
+@media only screen and (min-width: 641px) {
+  .logo-container {
+    -webkit-transition: width 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out;
+    width: 275px;
+    height: 275px;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .logo-container {
+    width: 450px;
+    height: 450px;
+    -webkit-transition: width 0.3s ease-in;
+    transition: width 0.3s ease-in;
+    -webkit-transition: height 0.3s ease-in;
+    transition: height 0.3s ease-in;
+    margin-top: 75px;
+    -webkit-transition: margin-top 0.3s ease-in;
+    transition: margin-top 0.3s ease-in;
+  }
+}
+.logo-container .logo {
+  height: 75%;
+  max-width: 75%;
+  margin: auto auto;
+  content: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/156296/troy-bike-rescue-logo_2.svg");
+}
+.logo-container .title {
+  width: 100%;
+  margin: auto auto;
+  padding-bottom: 10px;
+  color: ivory;
+  font-size: 1.5em;
+  font-family: "Oswald", Arial, sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 5px;
+}
+@media only screen and (max-width: 640px) {
+  .logo-container .title {
+    font-size: 1.4em;
+    line-height: 1.2em;
+  }
+}
+@media only screen and (min-width: 641px) {
+  .logo-container .title {
+    font-size: 1.3em;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .logo-container .title {
+    text-shadow: 0px 4px 0px rgba(113, 18, 32, 0.6);
+    font-size: 2.7em;
+    font-weight: 700;
+    line-height: 1em;
+  }
+}
+
+section.content {
+  width: 90%;
+  margin: 0 auto;
+  background-color: ivory;
+}

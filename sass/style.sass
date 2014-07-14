@@ -1,0 +1,127 @@
+@import "compass/css3"
+
+$logo: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/156296/troy-bike-rescue-logo_2.svg"
+$background: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/156296/troy-bike-rescue-background.jpg.jpg"
+$redish: #EB2424
+
+@import compass/css3
+@import compass/utilities/general/clearfix
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,700,300)
+@import url(http://fonts.googleapis.com/css?family=Tinos:400italic|Karma:300,400,500,600,700)
+
+@mixin media($type) 
+  @if $type == desktop 
+    @media only screen and (min-width:1025px)
+      @content
+  @if $type == tablet 
+    @media only screen and (min-width:641px)
+      @content
+  @else if $type == mobile
+    @media only screen and (max-width:640px)
+      @content
+      
+html
+  width: 100%
+  height: 100%
+  background-color: grey
+  background-image: url($background)
+  background-size: cover
+  padding: 0 0
+  body
+    background: transparent
+  
+nav
+  position: absolute
+  z-index: 1
+  margin-top: 5px
+  margin-left: -20px
+
+.main
+  margin-top: 10%
+  
+.tab
+  font-family: Tinos, Times-Roman, serif
+  font-weight: 400
+  font-style: italic
+  font-size: 1.05em
+  a
+    color: ivory
+    letter-spacing: 2px
+    line-height: 1.5em
+    text-decoration: none
+    text-transform: uppercase
+    +transition(margin-left 0.3s ease-in-out)
+    &.active 
+      color: $redish
+      margin-left: 20px
+      +transition(margin-left 0.3s ease-in-out)
+    &:hover
+      color: $redish
+      +transition(color 0.5s ease-in-out)
+
+.logo-container
+  margin: 0 auto
+  margin-top: 100px
+  padding: 20px
+  background-color: $redish
+  display: flex
+  flex-direction: column
+  text-shadow: 0px 2px 0px rgba(113, 18, 32, 0.60)
+    
+  @include media(mobile)
+    +transition(width 0.3s ease-out)
+    +transition(height 0.3s ease-in)
+    width: 200px
+    height: 200px
+    padding: 10px
+    
+  @include media(tablet)
+    +transition(width 0.3s ease-in-out)
+    width: 275px
+    height: 275px
+    
+  @include media(desktop)
+    width: 450px
+    height: 450px
+    +transition(width 0.3s ease-in)
+    +transition(height 0.3s ease-in)
+    margin-top: 75px
+    +transition(margin-top 0.3s ease-in)
+    
+  .logo
+    height: 75%
+    max-width: 75%
+    margin: auto auto
+    content: url($logo)
+      
+  .title
+    width: 100%
+    margin: auto auto
+    padding-bottom: 10px
+    color: ivory
+    font-size: 1.5em
+    font-family: 'Oswald', Arial, sans-serif
+    font-weight: 400
+    text-transform: uppercase
+    text-align: center
+    letter-spacing: 5px
+    
+    @include media(mobile)
+      font-size: 1.4em
+      line-height: 1.2em
+      
+    @include media(tablet)
+      font-size: 1.3em
+      
+    @include media(desktop)
+      text-shadow: 0px 4px 0px rgba(113, 18, 32, 0.60)
+      font-size: 2.7em
+      font-weight: 700
+      line-height: 1em
+      
+section.content
+  width: 90%
+  margin: 0 auto
+  background-color: ivory
+  
+  
