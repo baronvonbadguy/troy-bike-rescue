@@ -1,0 +1,34 @@
+doctype html
+include header
+html(class="no-js", lang="en")
+    body
+    .small-12.columns.primary      
+      nav
+        .menu-title
+        ul
+          each tab in ['Troy Bike Rescue', 'Volunteer', 'Get a Bike', 'Calendar', 'Gallery', 'About', 'Shop']
+            li.tab: a(href='#')= tab
+      .row
+        .small-12.large-6.small-centered.large-centered.columns
+          .row
+            .logo-container
+              .logo
+              .title troy bike rescue 
+          .info-container.row 
+            li 380 6TH AVENUE   TROY NY 12180
+            li 518 - 328 - 4827
+      .main.row       
+        section.content.small-6.small-centered.columns
+          h4.
+            About Troy Bike Rescue
+            Troy Bike Rescue is a collective of cycling enthusiasts committed to removing bikes from the waste stream and getting them back on the streets.
+
+            We operate a volunteer-run community bike space where we organize:
+
+            DiY bike repair nights: Open Shop 
+            hands-on bicycle education: Learn Earn
+            sliding scale bicycle adoption by Suggested Donation
+            ... and mobile workshops
+            We are part of an international movement of "community bike projects" - using bicycles to create community.
+            ********************************
+include footer
