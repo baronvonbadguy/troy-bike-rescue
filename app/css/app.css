@@ -7342,17 +7342,17 @@ section.content {
 
   .menu-title {
     position: relative;
-    font-size: 2em;
+    font-size: 1em;
     color: ivory;
-    cursor: pointer;
     content: "Boosh";
   }
   .menu-title:before {
     margin: 10px 10px;
     float: left;
     content: "\2261";
-    font-size: 1em;
+    font-size: 2em;
     color: ivory;
+    cursor: pointer;
   }
 
   nav {
@@ -7365,27 +7365,18 @@ section.content {
   }
   nav ul {
     width: 100%;
+    margin-left: 0em;
     position: fixed;
     margin-top: 50px;
+    background: url("/images/noise.png"), linear-gradient(#222222, #222222);
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
-  nav ul.open-drawer li {
-    height: 25px;
-    margin-top: 0px;
-    font-style: none;
-    -webkit-transition: margin-top 0.3s ease-in, height 0.3s ease-in-out;
-    -moz-transition: margin-top 0.3s ease-in, height 0.3s ease-in-out;
-    -o-transition: margin-top 0.3s ease-in, height 0.3s ease-in-out;
-    transition: margin-top 0.3s ease-in, height 0.3s ease-in-out;
-  }
   nav ul li {
     width: 100vw;
     height: 0px;
-    margin-left: -1em;
     z-index: -1;
-    background: url("/images/noise.png"), linear-gradient(#222222, #222222);
     overflow: hidden;
     color: ivory;
     font-size: 1.5em;
@@ -7403,5 +7394,20 @@ section.content {
   }
   nav ul li:last-child {
     box-shadow: 0px 5px 15px #222222;
+  }
+  nav ul.open-drawer li {
+    color: ivory;
+    font-size: 1.5em;
+    font-family: "Oswald", Arial, sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    height: 25px;
+    margin-top: 0px;
+    font-style: none;
+    -webkit-transition: margin-top 0.3s ease-in, height 0.3s ease-in-out;
+    -moz-transition: margin-top 0.3s ease-in, height 0.3s ease-in-out;
+    -o-transition: margin-top 0.3s ease-in, height 0.3s ease-in-out;
+    transition: margin-top 0.3s ease-in, height 0.3s ease-in-out;
   }
 }
