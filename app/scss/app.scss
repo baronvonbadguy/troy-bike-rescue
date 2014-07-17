@@ -46,6 +46,7 @@
 
 @import "appstyles";
 @import "compass";
+//@import "effeckt-page-transitions";
 
 @import url(http://fonts.googleapis.com/css?family=Oswald:400,700,300|Tinos:400italic);
 
@@ -119,7 +120,7 @@ nav {
     text-decoration: none;
     text-transform: uppercase;
     @include transition(margin-left 0.3s ease-in-out);
-    &.active {
+    &.active-tab {
       color: $redish;
       margin-left: 20px;
       @include transition(margin-left 0.3s ease-in-out);
@@ -210,10 +211,16 @@ nav {
   }
 }
 
-section.content {
+section {
   width: 90%;
   margin: 0 auto;
   background-color: ivory;
+
+  .content {
+    &.active-content{
+      background-color: blue;
+    }
+  }
 
 }
 

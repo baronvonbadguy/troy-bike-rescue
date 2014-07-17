@@ -26,16 +26,22 @@ var app = (function(document, $) {
 
 $(document).ready(function() {
 	'use strict';
+	//when each tab is clicked it marks itself as active and marks all other tabs inactive
 	$('.tab a').click(function () {
 
-	  $('a').removeClass('active');
-	  $(this).toggleClass('active');
+	  $('a').removeClass('active-tab');
+	  $('.content').removeClass('slide-from-right');
+	  //switches the content when a new tab is clicked
+	  var thisClass = $(this).attr("class");
+		console.log(thisClass);
+	  $('.' + thisClass).toggleClass('slide-from-right');
 
+	  $(this).toggleClass('active-tab');
+	  
 	});
-
+	//toggles the menu drawer to open when the menu button is clicked
 	$('.menu-title').click(function() {
 	  $('ul').toggleClass('open-drawer');
-	  console.log('fuck honmeless');
 	});
 
 	$(document).foundation();
