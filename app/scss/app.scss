@@ -46,7 +46,7 @@
 
 @import "appstyles";
 @import "compass";
-//@import "effeckt-page-transitions";
+@import "effeckt/effeckt.scss";
 
 @import url(http://fonts.googleapis.com/css?family=Oswald:400,700,300|Tinos:400italic);
 
@@ -254,7 +254,8 @@ section {
     height: 50px;
     margin: 0 auto;
     padding: 0 0;
-    background: url($noise), linear-gradient(adjust-lightness($charcoal, 10), $charcoal);    
+    background: url($noise), linear-gradient(adjust-lightness($charcoal, 10), $charcoal);  
+    z-index:1001;  
     ul {
       width: 100%;
       margin-left: 0em;
@@ -265,7 +266,6 @@ section {
       li {
         width: 100vw;
         height: 0px;
-        z-index: -1;
         overflow: hidden;
         @include oswald;
         @include box-sizing("border-box");

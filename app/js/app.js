@@ -30,18 +30,18 @@ $(document).ready(function() {
 	$('.tab a').click(function () {
 
 	  $('a').removeClass('active-tab');
-	  $('.content').removeClass('slide-from-right');
+	  $('.content').removeClass('effeckt-page-active');
 	  //switches the content when a new tab is clicked
 	  var thisClass = $(this).attr("class");
-		console.log(thisClass);
-	  $('.' + thisClass).toggleClass('slide-from-right');
+	  console.log(thisClass);
+	  $('.content' + '.' + thisClass).toggleClass('effeckt-page-active');
 
 	  $(this).toggleClass('active-tab');
-	  
+	  $('.menu').toggleClass('open-drawer');
 	});
 	//toggles the menu drawer to open when the menu button is clicked
 	$('.menu-title').click(function() {
-	  $('ul').toggleClass('open-drawer');
+	  $('.menu').toggleClass('open-drawer');
 	});
 
 	$(document).foundation();

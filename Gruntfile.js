@@ -126,6 +126,10 @@ module.exports = function(grunt) {
 				options: {
 					livereload: true
 				}
+			},
+			autoprefixer: {
+				files: '<%= app%>/css/*.css',
+				tasks: ['autoprefixer']
 			}
 		},
 
@@ -161,11 +165,25 @@ module.exports = function(grunt) {
 					'font-awesome',
 					'jquery-placeholder',
 					'jquery.cookie',
-					'foundation'
+					'foundation',
+					'fastclick',
+					'normalize.css'
 				]
 			}
-		}
+		},
 
+		autoprefixer: {
+            multiple_files: {
+            	expand: true,
+            	flatten: true,
+            	src: '<%= app %>/css/*.css'
+            },
+            diff: {
+        		options: {
+            		diff: true
+       			}
+    		}
+        }
 	});
 
 	grunt.registerTask('compile-jade', ['jade']);
@@ -177,5 +195,5 @@ module.exports = function(grunt) {
 	grunt.registerTask('server-dist', ['connect:dist']);
 	
 	grunt.registerTask('publish', ['compile-jade', 'compile-sass', 'clean:dist', 'validate-js', 'useminPrepare', 'copy:dist', 'newer:imagemin', 'concat', 'cssmin', 'uglify', 'usemin']);
-	grunt.loadNpmTasks('grunt-build-control');
+	grunt.loadNpmTasks('grunt-autoprefixer');
 };
