@@ -46,10 +46,10 @@
 
 @import "appstyles";
 @import "compass";
-@import "effeckt/effeckt.scss";
 
 @import url(http://fonts.googleapis.com/css?family=Oswald:400,700,300|Tinos:400italic);
 
+//MIXINS
 @mixin media($type) {
   @if $type == desktop {
     @media only screen and (min-width: 1025px) {
@@ -70,13 +70,13 @@
 
 @mixin oswald {
   color: ivory;
-  font-size: 1.5em;
   font-family: "Oswald", Arial, sans-serif;
   font-weight: 400;
   text-transform: uppercase;
   text-align: center;
 }
 
+//VARIABLES
 $logo: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/156296/troy-bike-rescue-logo_2.svg";
 $background: "/images/background.jpg";
 $noise: "/images/noise.png";
@@ -133,10 +133,9 @@ nav {
 }
 
 .logo-container {
-  margin: 0 auto;
-  margin-top: 100px;
+  margin: 100px auto 0 auto;
   padding: 20px;
-  background-color: $redish;
+  background: $redish url($noise);
   display: flex;
   flex-direction: column;
   text-shadow: 0px 2px 0px rgba(113, 18, 32, 0.6);
@@ -198,7 +197,7 @@ nav {
   margin: 0 auto;
 
   li {
-    margin-top: 25px;
+    margin: 25px auto 0 auto;
     list-style-type: none;
     font-size: 1.5em;
     font-family: "Tinos", Times-Roman, serif;
@@ -214,11 +213,23 @@ nav {
 section {
   width: 90%;
   margin: 0 auto;
+  padding: 0 10px;
   background-color: ivory;
-
   .content {
+    display: none;
+    h1, h2 {
+      @include oswald;
+      margin: 0 -10px;
+      background: $redish url($noise);
+      color: ivory;
+      font-size: 2em;
+      letter-spacing: 0.15em;
+    }
+    h2 { 
+      font-size: 1.7em;
+    }
     &.active-content{
-      background-color: blue;
+      display: block;
     }
   }
 
@@ -234,19 +245,19 @@ section {
     margin: 0 0;
     padding: 0 0;
   }
-.menu-title {
-      &:before {
-        margin: 10px 10px;
-        float: left;
-        content: "\2261";
-        font-size: 2em;
-        color: ivory;
-        cursor: pointer;
-      }
-      position: relative;
-      font-size: 1em;
+  .menu-title {
+    &:before {
+      margin: 10px 10px;
+      float: left;
+      content: "\2261";
+      font-size: 2em;
       color: ivory;
-      content: "Boosh";
+      cursor: pointer;
+    }
+    position: relative;
+    font-size: 1em;
+    color: ivory;
+    content: "Boosh";
   }
   nav {
     position: fixed;

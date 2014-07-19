@@ -58,6 +58,7 @@ module.exports = function(grunt) {
 				src: ['<%= dist %>/*']
 			},
 		},
+
 		copy: {
 			dist: {
 				files: [{
@@ -121,16 +122,17 @@ module.exports = function(grunt) {
 				files: '<%= app %>/**/*.jade',
 				tasks: ['jade']
 			},
+			autoprefixer: {
+				files: '<%= app%>/css/*.css',
+				tasks: ['autoprefixer']
+			},
 			livereload: {
 				files: ['<%= app %>/**/*.html', '!<%= app %>/bower_components/**', '<%= app %>/js/**/*.js', '<%= app %>/css/**/*.css', '<%= app %>/images/**/*.{jpg,gif,svg,jpeg,png}'],
 				options: {
 					livereload: true
 				}
-			},
-			autoprefixer: {
-				files: '<%= app%>/css/*.css',
-				tasks: ['autoprefixer']
 			}
+			
 		},
 
 		connect: {
@@ -173,16 +175,14 @@ module.exports = function(grunt) {
 		},
 
 		autoprefixer: {
-            multiple_files: {
-            	expand: true,
-            	flatten: true,
-            	src: '<%= app %>/css/*.css'
+            dist: {
+            	single_file: {
+            		'<%= app %>/css/app.css': '<%= app %>/css/app.css'
+            	}
             },
-            diff: {
-        		options: {
-            		diff: true
-       			}
-    		}
+    		options: {
+  				browsers: ['last 2 version', '> 5%', 'ie 9', 'chrome 20']
+			}
         }
 	});
 

@@ -8,21 +8,20 @@ html(class="no-js", lang="en")
       nav
         .menu-title
         ul.menu
-          each tab_class, tab in tabs
-            li.tab: a(class=tab_class)= tab
+          each tab_id, tab in tabs
+            li.tab: a(id=(tab_id))= tab
       .row
-        .small-12.large-6.small-centered.large-centered.columns
+        .small-12.large-4.small-centered.large-uncentered.large-push-8.columns
           .row
             .logo-container
               .logo
               .title troy bike rescue 
-          .info-container.row 
+          .info-container.row
             li 380 6TH AVENUE   TROY NY 12180
             li 518 - 328 - 4827
-      .main.row       
-        section.small-12.large-6.small-centered.columns
-          - var i = 0
-          each tab_class, tab in tabs
-            .content(class=tab_class data-effeckt-page='page-'+ ++i)
-              +content(tab_class)
+        .main.small-12.large-8.small-centered.large-uncentered.large-pull-4.columns
+          section.row
+            each content_id, tab in tabs
+              .content(id=('content-' + content_id))
+                +content(content_id)
 include footer

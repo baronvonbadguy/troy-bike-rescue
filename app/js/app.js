@@ -30,14 +30,18 @@ $(document).ready(function() {
 	$('.tab a').click(function () {
 
 	  $('a').removeClass('active-tab');
-	  $('.content').removeClass('effeckt-page-active');
+	  $('.active-content').toggleClass('active-content');
 	  //switches the content when a new tab is clicked
-	  var thisClass = $(this).attr("class");
-	  console.log(thisClass);
-	  $('.content' + '.' + thisClass).toggleClass('effeckt-page-active');
-
+	  //gets specific content class to call on
+	  var thisID = $(this).attr("id");
+	  console.log('.content' + '#content-' + thisID);
+	  $('#content-' + thisID).toggleClass('active-content');
 	  $(this).toggleClass('active-tab');
 	  $('.menu').toggleClass('open-drawer');
+
+	  $('html, body').animate({
+        scrollTop: $('#content-' + thisID).offset().top - $('nav').height()
+      }, 500);
 	});
 	//toggles the menu drawer to open when the menu button is clicked
 	$('.menu-title').click(function() {
@@ -45,5 +49,5 @@ $(document).ready(function() {
 	});
 
 	$(document).foundation();
-
 });
+
