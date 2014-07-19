@@ -37,16 +37,26 @@ $(document).ready(function() {
 	  console.log('.content' + '#content-' + thisID);
 	  $('#content-' + thisID).toggleClass('active-content');
 	  $(this).toggleClass('active-tab');
+
 	  $('.menu').toggleClass('open-drawer');
+	  $('#menu-title').text($(this).text());
 
 	  $('html, body').animate({
-        scrollTop: $('#content-' + thisID).offset().top - $('nav').height()
+        scrollTop: $('#content-wrapper').offset().top - $('nav').height()
       }, 500);
 	});
 	//toggles the menu drawer to open when the menu button is clicked
-	$('.menu-title').click(function() {
+	$('#menu-icon').click(function() {
 	  $('.menu').toggleClass('open-drawer');
 	});
+
+	$('#content-wrapper').waypoint(function() {
+  		$('#menu-title').toggleClass('fade-in');
+	}, {
+		offset: function() {
+   	 		return -$(this).height();
+ 	 	}
+ 	});
 
 	$(document).foundation();
 });

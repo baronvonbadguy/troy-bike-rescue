@@ -22,7 +22,8 @@
   <body>
     <div class="small-12 columns primary">     
       <nav>
-        <div class="menu-title"></div>
+        <div id="menu-icon"></div>
+        <div id="menu-title"> </div>
         <ul class="menu">
           <li class="tab"><a id="troy-bike-rescue">Troy Bike Rescue</a></li>
           <li class="tab"><a id="volunteer">Volunteer</a></li>
@@ -36,29 +37,31 @@
       <div class="row">
         <div class="small-12 large-4 small-centered large-uncentered large-push-8 columns">
           <div class="row">
-            <div class="logo-container">
-              <div class="logo"></div>
-              <div class="title">troy bike rescue </div>
+            <div id="logo-container">
+              <div id="logo-image"></div>
+              <div id="logo-title">troy bike rescue </div>
             </div>
           </div>
-          <div class="info-container row">
-            <li>380 6TH AVENUE   TROY NY 12180</li>
-            <li>518 - 328 - 4827</li>
+          <div class="row">
+            <div id="info-container">
+              <li>380 6TH AVENUE   TROY NY 12180</li>
+              <li>518 - 328 - 4827</li>
+            </div>
           </div>
         </div>
         <div class="main small-12 large-8 small-centered large-uncentered large-pull-4 columns">
-          <section class="row">
-            <div id="content-troy-bike-rescue" class="content">
-            </div>
-            <div id="content-volunteer" class="content">
-            </div>
-            <div id="content-get-a-bike" class="content">
-              <h1>How to Get a Bike</h1>
+          <div id="content-wrapper">
+            <section id="content-troy-bike-rescue" class="content">
+            </section>
+            <section id="content-volunteer" class="content">
+            </section>
+            <section id="content-get-a-bike" class="content">
+              <h1 class="content-title">How to Get a Bike</h1>
               <p>
                 At Troy Bike Rescue, you can either give a sliding scale Suggested Donation 
                 for a used bicycle, or you can chose to Learn and Earn for a bike. 
               </p>
-              <h4>Adopt a Bike</h4>
+              <h4 class="content-subtitle">Adopt a Bike</h4>
               <p>
                 Refurbished bicycles are available for adoption for a donation on a sliding scale.  
                 Bikes are grouped into several categories ($15-30, $30-60,  $60-100, etc...), 
@@ -73,13 +76,13 @@
                 hours working on Adoption Bikes and other TBR projects.  Learn and Earn hours and skills 
                 can be aquired during open shop hours (for adults) and youth hours (under 16).
               </p>
-            </div>
-            <div id="content-calendar" class="content">
-            </div>
-            <div id="content-gallery" class="content">
-            </div>
-            <div id="content-about" class="content">
-              <h1>About Us</h1>
+            </section>
+            <section id="content-calendar" class="content">
+            </section>
+            <section id="content-gallery" class="content">
+            </section>
+            <section id="content-about" class="content">
+              <h1 class="content-title">About Us</h1>
               <p>
                 Troy Bike Rescue is a collective of cycling enthusiasts committed to removing bikes 
                 from the waste stream and getting them back on the streets.
@@ -101,10 +104,10 @@
               <h4>Youth Shop: (Tues. 3:00 pm to 6:00 pm) Specific Hours for youth ages 10-15; Earn-A-Bike for volunteer hours; must have signed permission form from parents.  The first Tuesday of every month is Youthshop Ride Club.</h4>
               <h4>Fem Shop: a weekly workshop night run by, and dedicated to empowering non-male identifying folk with bike maintenance skills.</h4>
               <p>Children under 10 years of age MUST be accompanied by a parent at all times.</p>
-            </div>
-            <div id="content-shop" class="content">
-            </div>
-          </section>
+            </section>
+            <section id="content-shop" class="content">
+            </section>
+          </div>
         </div>
       </div>
     </div>
@@ -113,6 +116,7 @@
 <!-- build:js js/vendor/libraries.min.js-->
 <!-- bower:js-->
 <script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/jquery-waypoints/waypoints.js"></script>
 <!-- endbower-->
 <!-- endbuild-->
 <!-- build:js js/vendor/foundation.min.js-->
