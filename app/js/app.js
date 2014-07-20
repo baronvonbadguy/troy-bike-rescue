@@ -38,7 +38,7 @@ $(document).ready(function() {
 		$('.active-content').toggleClass('active-content');
 		//switches the content when a new tab is clicked
 		//matches content id with tab id
-		var thisID = $(this).attr('id');
+		var thisID = $(this).parent().attr('id');
 		$('#content-' + thisID).toggleClass('active-content');
 		$(this).parent().toggleClass('active-tab');
 		//closes menu and sets the title to the active content title
@@ -59,10 +59,6 @@ $(document).ready(function() {
 	//the menu title fades in or out
 	$('#content-wrapper').waypoint(function() {
   		$('#menu-title').toggleClass('fade-in');
-	}, {
-		offset: function() {
-   	 		return 0;
- 	 	}
- 	});
+	});
 });
 

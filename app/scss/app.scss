@@ -132,6 +132,14 @@ li.tab {
   }
 }
 
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+.columns {
+  padding: 0 0;
+}
+
 #logo-container {
   margin: 100px auto 0 auto;
   padding: 20px;
@@ -305,14 +313,14 @@ li.tab {
             letter-spacing: 8px;
           }
         }
+        &:last-child {
+          padding-bottom: 15px;
+          @include box-shadow(0px 5px 15px #222222);
+        }
       }
       &.open-drawer {
         height: 175px;
         @include transition(height .6s ease-in-out);
-        &:after {
-          content: ' ';
-          box-shadow: 0px 5px 15px #222222;
-        }
       }
     }
   }
