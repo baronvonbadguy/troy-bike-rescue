@@ -141,8 +141,8 @@ module.exports = function(grunt) {
 					port: 9000,
 					base: '<%= app %>/',
 					open: true,
-					livereload: true,
-					hostname: '127.0.0.1'
+					livereload: 35729,
+					hostname: '0.0.0.0'
 				}
 			},
 			dist: {

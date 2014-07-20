@@ -33,7 +33,7 @@ $(document).ready(function() {
 	  $('.active-content').toggleClass('active-content');
 	  //switches the content when a new tab is clicked
 	  //gets specific content class to call on
-	  var thisID = $(this).attr("id");
+	  var thisID = $(this).attr('id');
 	  console.log('.content' + '#content-' + thisID);
 	  $('#content-' + thisID).toggleClass('active-content');
 	  $(this).toggleClass('active-tab');

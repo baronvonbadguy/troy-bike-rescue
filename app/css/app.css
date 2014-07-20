@@ -7178,12 +7178,9 @@ html body {
 nav {
   position: absolute;
   z-index: 1;
-  margin-top: 5px;
-  margin-left: -20px;
 }
-
-.main {
-  margin-top: 10%;
+nav #menu-title {
+  display: none;
 }
 
 .tab {
@@ -7191,6 +7188,7 @@ nav {
   font-weight: 400;
   font-style: italic;
   font-size: 1.05em;
+  list-style: none;
 }
 .tab a {
   color: ivory;
@@ -7322,27 +7320,43 @@ nav {
 }
 
 #content-wrapper {
-  margin: 0 auto;
-  padding: 0 10px;
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+  float: right;
+  left: 0%;
+  right: auto;
+  right: 0%;
+  left: auto;
+  float: left;
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+  margin-left: 0% !important;
+  margin-top: 10px;
   background-color: ivory;
 }
 #content-wrapper section.content {
+  width: 100%;
   display: none;
 }
-#content-wrapper section.content h1, #content-wrapper section.content h2 {
+#content-wrapper section.content h1, #content-wrapper section.content h2, #content-wrapper section.content h4 {
   color: ivory;
   font-family: "Oswald", Arial, sans-serif;
   font-weight: 400;
   text-transform: uppercase;
   text-align: center;
-  margin: 0 -10px;
+  margin-top: 0px;
   background: #eb2424 url("/images/noise.png");
   color: ivory;
-  font-size: 2em;
-  letter-spacing: 0.15em;
 }
 #content-wrapper section.content h2 {
   font-size: 1.7em;
+}
+#content-wrapper section.content h1 {
+  font-size: 2em;
+  letter-spacing: 0.15em;
 }
 #content-wrapper section.content.active-content {
   display: block;
@@ -7350,7 +7364,6 @@ nav {
 
 @media only screen and (max-width: 640px) {
   .primary {
-    width: 100%;
     margin: 0 0;
     padding: 0 0;
   }
@@ -7359,14 +7372,14 @@ nav {
     position: fixed;
     width: 100%;
     height: 50px;
-    margin: 0 auto;
     padding: 0 0;
+    background: url("/images/noise.png"), #222222;
     background: url("/images/noise.png"), linear-gradient(#3c3c3c, #222222);
     z-index: 2;
   }
   nav #menu-icon:before {
     position: relative;
-    margin: 10px 10px;
+    margin: 10px 0 0 10px;
     float: left;
     content: "\2261";
     font-size: 2em;
@@ -7380,6 +7393,7 @@ nav {
     font-weight: 400;
     text-transform: uppercase;
     text-align: center;
+    display: inline;
     position: absolute;
     width: 100%;
     height: 50px;
@@ -7405,7 +7419,7 @@ nav {
     margin-left: 0px;
     margin-top: 50px;
     position: absolute;
-    background: url("/images/noise.png"), linear-gradient(#222222, #222222);
+    background: url("/images/noise.png"), #222222;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
