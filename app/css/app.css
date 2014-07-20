@@ -7364,8 +7364,12 @@ li.tab a:hover {
   letter-spacing: 0.1em;
 }
 #content-wrapper section.content h4 {
+  margin: 0px 5px;
   font-size: 1em;
   letter-spacing: 0.15em;
+}
+#content-wrapper section.content p {
+  padding: 0px 10px;
 }
 #content-wrapper section.content.active-content {
   display: block;

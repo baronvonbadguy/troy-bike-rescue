@@ -212,7 +212,6 @@ li.tab {
 }
 
 #content-wrapper {
-  //@include grid-row(collapse);
   @include grid-column(12, true, true, 0, 0, 0, true, left);
   margin-top: 10px;
   background-color: ivory;
@@ -234,8 +233,12 @@ li.tab {
       letter-spacing: 0.1em;
     }
     h4 {
+      margin: 0px 5px;
       font-size: 1em;
       letter-spacing: 0.15em;
+    }
+    p {
+      padding: 0px 10px;
     }
     &.active-content{
       display: block;
