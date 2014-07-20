@@ -24,6 +24,6 @@ html(class="no-js", lang="en")
         .small-12.large-8.small-centered.large-uncentered.large-pull-4.columns
           #content-wrapper.row
             each content_id, tab in tabs
-              section.content(id=('content-' + content_id))
+              section.content.small-12.large-6.columns(id=('content-' + content_id))
                 +content(content_id)
 include footer

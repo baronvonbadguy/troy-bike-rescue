@@ -132,10 +132,6 @@ li.tab {
   }
 }
 
-.row {
-  margin-left: 0;
-  margin-right: 0;
-}
 .columns {
   padding: 0 0;
 }
@@ -231,9 +227,14 @@ li.tab {
     }
     h2 { 
       font-size: 1.7em;
+      letter-spacing: 0.1em;
     }
     h1 {
       font-size: 2em;
+      letter-spacing: 0.1em;
+    }
+    h4 {
+      font-size: 1em;
       letter-spacing: 0.15em;
     }
     &.active-content{
