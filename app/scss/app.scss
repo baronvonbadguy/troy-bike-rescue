@@ -111,6 +111,13 @@ li.tab {
   font-style: italic;
   font-size: 1.05em;
   list-style: none;
+  &.active-tab {
+    a {
+      color: $redish;
+      margin-left: 20px;
+      @include transition(margin-left 0.3s ease-in-out);
+    }
+  }
   a {
     color: ivory;
     letter-spacing: 2px;
@@ -118,11 +125,6 @@ li.tab {
     text-decoration: none;
     text-transform: uppercase;
     @include transition(margin-left 0.3s ease-in-out);
-    &.active-tab {
-      color: $redish;
-      margin-left: 20px;
-      @include transition(margin-left 0.3s ease-in-out);
-    }
     &:hover {
       color: $redish;
       @include transition(color 0.5s ease-in-out);
@@ -296,6 +298,12 @@ li.tab {
         @include box-sizing("border-box");
         a {
           letter-spacing: 4px;
+        }
+        &.active-tab {
+          a {
+            margin-left: 0px;
+            letter-spacing: 8px;
+          }
         }
       }
       &.open-drawer {

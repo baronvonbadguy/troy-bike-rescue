@@ -7190,20 +7190,20 @@ li.tab {
   font-size: 1.05em;
   list-style: none;
 }
+li.tab.active-tab a {
+  color: #eb2424;
+  margin-left: 20px;
+  -webkit-transition: margin-left 0.3s ease-in-out;
+  -moz-transition: margin-left 0.3s ease-in-out;
+  -o-transition: margin-left 0.3s ease-in-out;
+  transition: margin-left 0.3s ease-in-out;
+}
 li.tab a {
   color: ivory;
   letter-spacing: 2px;
   line-height: 1.5em;
   text-decoration: none;
   text-transform: uppercase;
-  -webkit-transition: margin-left 0.3s ease-in-out;
-  -moz-transition: margin-left 0.3s ease-in-out;
-  -o-transition: margin-left 0.3s ease-in-out;
-  transition: margin-left 0.3s ease-in-out;
-}
-li.tab a.active-tab {
-  color: #eb2424;
-  margin-left: 20px;
   -webkit-transition: margin-left 0.3s ease-in-out;
   -moz-transition: margin-left 0.3s ease-in-out;
   -o-transition: margin-left 0.3s ease-in-out;
@@ -7445,6 +7445,10 @@ li.tab a:hover {
   }
   nav ul.menu li.tab a {
     letter-spacing: 4px;
+  }
+  nav ul.menu li.tab.active-tab a {
+    margin-left: 0px;
+    letter-spacing: 8px;
   }
   nav ul.menu.open-drawer {
     height: 175px;

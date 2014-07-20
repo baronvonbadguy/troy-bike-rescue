@@ -24,6 +24,8 @@ var app = (function(document, $) {
 
 	//initializes with the about content active
 	$('#content-about').toggleClass('active-content');
+	$('#about').toggleClass('active-tab');
+	$('#menu-title').text($('#about').text());
 })();
 
 $(document).ready(function() {
@@ -32,13 +34,13 @@ $(document).ready(function() {
 	//when each tab is clicked it marks itself as active and marks all other tabs inactive
 	$('.tab a').click(function () {
 		//unselects all other tabs and content
-		$('a').removeClass('active-tab');
+		$('.active-tab').toggleClass('active-tab');
 		$('.active-content').toggleClass('active-content');
 		//switches the content when a new tab is clicked
 		//matches content id with tab id
 		var thisID = $(this).attr('id');
 		$('#content-' + thisID).toggleClass('active-content');
-		$(this).toggleClass('active-tab');
+		$(this).parent().toggleClass('active-tab');
 		//closes menu and sets the title to the active content title
 		$('.menu').removeClass('open-drawer');
 		$('#menu-title').text($(this).text());
@@ -59,7 +61,7 @@ $(document).ready(function() {
   		$('#menu-title').toggleClass('fade-in');
 	}, {
 		offset: function() {
-   	 		return -$(this).height();
+   	 		return 0;
  	 	}
  	});
 });
