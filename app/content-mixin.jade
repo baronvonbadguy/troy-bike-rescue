@@ -19,40 +19,46 @@ mixin content(type)
       h2 Location &amp; Hours
     .row
       .small-6.columns
-        h4 Location: 
+        h4 Location
         p  3280 6th avenue in North Troy (near Glen Ave.)
       .small-6.columns
-        h4 Phone:  
+        h4 Phone
         p (518) EAT-4TBR (328-4827)
     .row
       .small-6.columns
-        h4 Open Shop:  
+        h4 Open Shop
         p (Mon. &amp; Wed. 5:00 pm to 8:00pm) Self-Service Workshop with volunteer staff; come and volunteer, adopt a bike, or Learn &amp; Earn!
       .small-6.columns
-        h4 Youth Shop: 
+        h4 Youth Shop
         p (Tues. 3:00 pm to 6:00 pm) Specific Hours for youth ages 10-15; Earn-A-Bike for volunteer hours; must have signed permission form from parents.  The first Tuesday of every month is Youthshop Ride Club.
     .row
-      h4 Fem Shop: 
-      p a weekly workshop night run by, and dedicated to empowering non-male identifying folk with bike maintenance skills.
-      p Children under 10 years of age MUST be accompanied by a parent at all times.
+      .small-6.small-centered.columns
+        h4 Fem Shop
+        p a weekly workshop night run by, and dedicated to empowering non-male identifying folk with bike maintenance skills.
+        p Children under 10 years of age MUST be accompanied by a parent at all times.
   -else if(type==='get-a-bike')
-    h1.content-title How to Get a Bike
-    p.
-      At Troy Bike Rescue, you can either give a sliding scale Suggested Donation 
-      for a used bicycle, or you can chose to Learn and Earn for a bike. 
-    h4.content-subtitle Adopt a Bike
-    p.
-      Refurbished bicycles are available for adoption for a donation on a sliding scale.  
-      Bikes are grouped into several categories ($15-30, $30-60,  $60-100, etc...), 
-      depending on quality and labor spent.  Adoption Bikes are available on a first come 
-      first serve basis, and are sold "as is" (some may require some TLC).
-      All proceeds from bike adoption fees pay TBR overhead.  
-      Without your donations, we cannot do what we do.
-    h4 Learn and Earn
-    p.
-      Youth and adults can 'learn and earn' to obtain a bike by putting in 6 Learn and Earn 
-      hours working on Adoption Bikes and other TBR projects.  Learn and Earn hours and skills 
-      can be aquired during open shop hours (for adults) and youth hours (under 16).
+    .row
+      h1.content-title How to Get a Bike
+    .row
+      p.
+        At Troy Bike Rescue, you can either give a sliding scale Suggested Donation 
+        for a used bicycle, or you can chose to Learn and Earn for a bike. 
+    .row
+      .small-12.medium-6.columns
+        h4.content-subtitle Adopt a Bike
+        p.
+          Refurbished bicycles are available for adoption for a donation on a sliding scale.  
+          Bikes are grouped into several categories ($15-30, $30-60,  $60-100, etc...), 
+          depending on quality and labor spent.  Adoption Bikes are available on a first come 
+          first serve basis, and are sold "as is" (some may require some TLC).
+          All proceeds from bike adoption fees pay TBR overhead.  
+          Without your donations, we cannot do what we do.
+      .small-12.medium-6.columns
+        h4 Learn and Earn
+        p.
+          Youth and adults can 'learn and earn' to obtain a bike by putting in 6 Learn and Earn 
+          hours working on Adoption Bikes and other TBR projects.  Learn and Earn hours and skills 
+          can be aquired during open shop hours (for adults) and youth hours (under 16).
   -else if(type==='volunteer')
     .row
       h1 How to Get Involved
@@ -70,7 +76,7 @@ mixin content(type)
           As a volunteer, practice mutual aid and respect.  Help those in need; Ask for help when you need it; 
           respect the space and everyone in it.
       .small-12.large-6.columns
-        h2 How to Get Involved?
+        h2 How to Get Involved
         p.
           Volunteering is as simple as showing up to an open shop session and beginning to participate.  
           As a new volunteer you will have a lot to learn, like where we keep things, and how to answer 
@@ -125,7 +131,7 @@ mixin content(type)
           anyone away for lack of funds.  ... but we also do not like to be taken advantage of.  Sometimes 
           its a fine line.
       .small-12.medium-6.columns
-        h4 No Wrench-Grabbing!
+        h4 No Wrench-Grabbing
         p.
           Sometimes it is very tempting to take a tool from someone who is using it incorrectly or having 
           trouble with the task.  Please think again!  We empower others to work through their frustrations 
@@ -134,14 +140,14 @@ mixin content(type)
           opportunity to finish it themselves.
     .row
       .small-12.medium-6.columns
-        h4 Keep the Shop Tidy!
+        h4 Keep the Shop Tidy
         p.
           Clean up after yourself!  Clean up after others!  TBR is a collective spaces, so we need to be 
           considerate of those who will open the shop the next day.  Clean-up time bell rings 30 minutes 
           before the end of a shop session.  This is a signal to wrap up projects and clean-up parts and 
           tools.   Lead by example, and learn where things go in the process.
       .small-12.medium-6.columns
-        h4 Meet People Where They Are...
+        h4 Meet People Where They Are
         p.
           Every situation is an opportunity to teach and to learn from one another.... if you let it.  
           Keep TBR a safe space and try not to judge people before getting to know them.
