@@ -7352,18 +7352,19 @@ li.tab a:hover {
   text-transform: uppercase;
   text-align: center;
   margin-top: 0px;
-  background: #eb2424 url("/images/noise.png");
   color: ivory;
-}
-#content-wrapper section.content h2 {
-  font-size: 1.7em;
-  letter-spacing: 0.1em;
+  background: #eb2424 url("/images/noise.png");
 }
 #content-wrapper section.content h1 {
   font-size: 2em;
   letter-spacing: 0.1em;
 }
+#content-wrapper section.content h2 {
+  font-size: 1.7em;
+  letter-spacing: 0.1em;
+}
 #content-wrapper section.content h4 {
+  background: #4e4e4e url("/images/noise.png");
   margin: 0px 5px;
   font-size: 1em;
   letter-spacing: 0.15em;
