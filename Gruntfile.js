@@ -19,7 +19,7 @@ module.exports = function(grunt) {
 					quiet: true
 				},
 				files: {
-					'<%= app %>/css/app.css': '<%= app %>/scss/app.scss'
+					'<%= app %>/css/app--no-prefix.css': '<%= app %>/scss/app.scss'
 				}
 			}
 		},
@@ -103,7 +103,7 @@ module.exports = function(grunt) {
 
 		usemin: {
 			html: ['<%= dist %>/**/*.html', '!<%= app %>/bower_components/**'],
-			css: ['<%= dist %>/css/**/*.css'],
+			css: ['<%= dist %>/css/app.css'],
 			options: {
 				dirs: ['<%= dist %>']
 			}
@@ -123,11 +123,11 @@ module.exports = function(grunt) {
 				tasks: ['jade']
 			},
 			autoprefixer: {
-				files: '<%= app%>/css/*.css',
+				files: '<%= app%>/css/app--no-prefix.css',
 				tasks: ['autoprefixer']
 			},
 			livereload: {
-				files: ['<%= app %>/**/*.html', '!<%= app %>/bower_components/**', '<%= app %>/js/**/*.js', '<%= app %>/css/**/*.css', '<%= app %>/images/**/*.{jpg,gif,svg,jpeg,png}'],
+				files: ['<%= app %>/**/*.html', '!<%= app %>/bower_components/**', '<%= app %>/js/**/*.js', '<%= app%>/css/app.css', '<%= app %>/images/**/*.{jpg,gif,svg,jpeg,png}'],
 				options: {
 					livereload: true
 				}
@@ -177,7 +177,7 @@ module.exports = function(grunt) {
 		autoprefixer: {
             dist: {
             	single_file: {
-            		'<%= app %>/css/app.css': '<%= app %>/css/app.css'
+            		'<%= app %>/css/app.css': '<%= app %>/css/app--no-prefix.css'
             	}
             },
     		options: {

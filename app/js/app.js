@@ -30,7 +30,6 @@ var app = (function(document, $) {
 
 $(document).ready(function() {
 	'use strict';
-	
 	//when each tab is clicked it marks itself as active and marks all other tabs inactive
 	$('.tab a').click(function () {
 		//unselects all other tabs and content
