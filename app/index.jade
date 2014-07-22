@@ -3,26 +3,26 @@ include content-mixin
 doctype html
 include header
 html(class="no-js", lang="en")
-  body.row
-    .small-12.columns.primary     
-      nav
-        #menu-icon
-        #menu-title= ' '
-        ul.menu
-          each tab_id, tab in tabs
-            li.tab(id=tab_id): a= tab
+  body.row        
+    nav
+      #menu-icon
+      #menu-title= ' '
+      ul.menu
+        each tab_id, tab in tabs
+          li.tab(id=tab_id): a= tab
+    .small-12.columns.primary
       .row.collapse
         .small-12.large-4.small-centered.large-uncentered.columns
           .row
-            #logo-container
-              #logo-image
-              #logo-title troy bike rescue 
-          .row
-            #info-container
-              li 380 6TH AVENUE   TROY NY 12180
-              li 518 - 328 - 4827
-        .small-12.medium-10.large-8.small-centered.large-uncentered.columns
-          #content-wrapper.row
+            #logo-info-container
+              #logo-container
+                #logo-image
+                #logo-title troy bike rescue 
+              #info-container
+                li#info-address 380 6TH AVENUE   TROY NY 12180
+                li#info-phone 518 - 328 - 4827
+        .small-12.medium-10.large-8.small-centered.large-uncentered.large-push-4.columns
+          #content-container.row
             each content_id, tab in tabs
               section.content.small-12.large-6.columns(id=('content-' + content_id))
                 +content(content_id)

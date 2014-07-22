@@ -7183,15 +7183,14 @@ nav {
 nav #menu-title {
   display: none;
 }
-
-li.tab {
+nav li.tab {
   font-family: Tinos, Times-Roman, serif;
   font-weight: 400;
   font-style: italic;
   font-size: 1.05em;
   list-style: none;
 }
-li.tab.active-tab a {
+nav li.tab.active-tab a {
   color: #eb2424;
   margin-left: 20px;
   -webkit-transition: margin-left 0.3s ease-in-out;
@@ -7199,7 +7198,7 @@ li.tab.active-tab a {
   -o-transition: margin-left 0.3s ease-in-out;
   transition: margin-left 0.3s ease-in-out;
 }
-li.tab a {
+nav li.tab a {
   color: ivory;
   letter-spacing: 2px;
   line-height: 1.5em;
@@ -7210,7 +7209,7 @@ li.tab a {
   -o-transition: margin-left 0.3s ease-in-out;
   transition: margin-left 0.3s ease-in-out;
 }
-li.tab a:hover {
+nav li.tab a:hover {
   color: #eb2424;
   -webkit-transition: color 0.5s ease-in-out;
   -moz-transition: color 0.5s ease-in-out;
@@ -7278,7 +7277,7 @@ li.tab a:hover {
   height: 75%;
   max-width: 75%;
   margin: auto auto;
-  content: url("images/troy-bike-rescue-logo.svg");
+  content: url("/images/troy-bike-rescue-logo.svg");
 }
 #logo-container #logo-title {
   width: 100%;
@@ -7324,29 +7323,15 @@ li.tab a:hover {
   text-shadow: 0px 0px 10px #a69191;
 }
 
-#content-wrapper {
-  position: relative;
-  padding-left: 0;
-  padding-right: 0;
-  width: 100%;
-  float: right;
-  left: 0%;
-  right: auto;
-  right: 0%;
-  left: auto;
-  float: left;
-  margin-left: auto;
-  margin-right: auto;
-  float: none;
-  margin-left: 0% !important;
+#content-container {
   margin-top: 10px;
   background-color: ivory;
 }
-#content-wrapper section.content {
+#content-container section.content {
   width: 100%;
   display: none;
 }
-#content-wrapper section.content h1, #content-wrapper section.content h2, #content-wrapper section.content h4 {
+#content-container section.content h1, #content-container section.content h2, #content-container section.content h4 {
   color: ivory;
   font-family: "Oswald", Arial, sans-serif;
   font-weight: 400;
@@ -7356,24 +7341,26 @@ li.tab a:hover {
   color: ivory;
   background: #eb2424 url("/images/noise.png");
 }
-#content-wrapper section.content h1 {
+#content-container section.content h1 {
+  text-shadow: 0px 4px 0px rgba(113, 18, 32, 0.6);
   font-size: 2em;
   letter-spacing: 0.1em;
 }
-#content-wrapper section.content h2 {
+#content-container section.content h2 {
+  text-shadow: 0px 3px 0px rgba(113, 18, 32, 0.6);
   font-size: 1.7em;
   letter-spacing: 0.1em;
 }
-#content-wrapper section.content h4 {
+#content-container section.content h4 {
   background: #4e4e4e url("/images/noise.png");
   margin: 0px 5px;
   font-size: 1em;
   letter-spacing: 0.15em;
 }
-#content-wrapper section.content p {
+#content-container section.content p {
   padding: 0px 10px;
 }
-#content-wrapper section.content.active-content {
+#content-container section.content.active-content {
   display: block;
 }
 
@@ -7478,5 +7465,49 @@ li.tab a:hover {
     -moz-transition: height 0.6s ease-in-out;
     -o-transition: height 0.6s ease-in-out;
     transition: height 0.6s ease-in-out;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  body {
+    padding: 0 0;
+  }
+
+  nav {
+    width: 100%;
+    margin-top: 0;
+    margin-left: -1em;
+    padding: 0 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  nav ul {
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #222222 url("/images/noise.png");
+    display: flex;
+  }
+  nav ul li {
+    margin: 0 auto;
+  }
+
+  #logo-info-container {
+    margin-top: 0;
+    margin-left: auto;
+    position: fixed;
+  }
+  #logo-info-container #logo-container {
+    margin-top: 0;
+  }
+
+  #content-container {
+    margin: 0 auto;
+  }
+
+  .primary {
+    position: absolute;
+    top: 75px;
   }
 }
