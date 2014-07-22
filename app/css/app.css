@@ -7195,7 +7195,7 @@ nav li.tab a:hover {
 }
 
 #logo-container {
-  margin: 100px auto 0 auto;
+  margin: 100px auto 25px auto;
   padding: 20px;
   background: #eb2424 url("/images/noise.png");
   display: -webkit-box;
@@ -7278,15 +7278,18 @@ nav li.tab a:hover {
   }
 }
 
-#info-container li {
-  margin: 25px auto 0 auto;
+#info-container {
+  width: 300px;
+  margin: 0 auto;
+}
+#info-container div {
   list-style-type: none;
   font-size: 1.5em;
   font-family: "Tinos", Times-Roman, serif;
   font-weight: 400;
   font-style: italic;
   text-align: center;
-  line-height: .5em;
+  line-height: 1em;
   color: ivory;
   text-shadow: 0px 0px 10px #a69191;
 }

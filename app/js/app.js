@@ -45,7 +45,7 @@ $(document).ready(function() {
 		$('#menu-title').text($(this).text());
 		//scrolls down to the active content
 		$('html, body').animate({
-		scrollTop: $('#content-wrapper').offset().top - $('nav').height()
+		scrollTop: $('#content-container').offset().top - $('nav').height()
 		}, 500);
 	});
 
@@ -56,7 +56,7 @@ $(document).ready(function() {
 	//sets a waypoint at the active content position offset by 
 	//the menu so that when the menu passes the content title
 	//the menu title fades in or out
-	$('#content-wrapper').waypoint(function() {
+	$('#content-container').waypoint(function() {
   		$('#menu-title').toggleClass('fade-in');
 	});
 });
