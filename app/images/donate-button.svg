@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="115.5px" height="46.5px" viewBox="0 0 115.5 46.5" enable-background="new 0 0 115.5 46.5" xml:space="preserve">
+<font horiz-adv-x="2048">
+<!-- Copyright (c) 2011 by vernon adams. All rights reserved. -->
+<!-- Copyright: Copyright 2014 Adobe System Incorporated. All rights reserved. -->
+<font-face font-family="Oswald" units-per-em="2048" underline-position="-103" underline-thickness="102"/>
+<missing-glyph horiz-adv-x="748" d="M68,0l544,0l0,1365l-544,0M136,68l0,1229l408,0l0,-1229z"/>
+<glyph unicode="A" horiz-adv-x="1038" d="M359,448l320,0l96,-448l256,0l-384,1792l-256,0l-384,-1792l256,0M647,640l-256,0l128,768z"/>
+<glyph unicode="D" horiz-adv-x="1133" d="M1037,576l0,704C1037,1656 900,1792 525,1792l-397,0l0,-1792l395,0C905,0 1037,195 1037,576M781,1216l0,-576C781,376 796,192 525,192l-141,0l0,1408l136,0C774,1600 781,1461 781,1216z"/>
+<glyph unicode="E" horiz-adv-x="861" d="M704,832l0,192l-320,0l0,576l448,0l0,192l-704,0l0,-1792l704,0l0,192l-448,0l0,640z"/>
+<glyph unicode="N" horiz-adv-x="1152" d="M842,0l182,0l0,1792l-256,0l0,-1108l-448,1108l-192,0l0,-1792l256,0l0,1192z"/>
+<glyph unicode="O" horiz-adv-x="1180" d="M590,1810C223,1810 96,1591 96,1226l0,-650C96,211 223,-18 590,-18C954,-18 1084,216 1084,576l0,650C1084,1586 954,1810 590,1810M590,1600C782,1600 828,1482 828,1290l0,-778C828,320 782,192 590,192C398,192 352,320 352,512l0,778C352,1482 398,1600 590,1600z"/>
+<glyph unicode="T" horiz-adv-x="888" d="M892,1792l-896,0l0,-228l320,0l0,-1564l256,0l0,1564l320,0z"/>
+</font>
+
+	<rect x="0" y="0" fill="#EC2424" width="115.5" height="46.5"/>
+<text transform="matrix(1 0 0 1 15.3647 33.999)" fill="#FFFFFF" font-family="'Oswald'" font-size="24" letter-spacing="2">DONATE</text>
+</svg>

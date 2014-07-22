@@ -7282,16 +7282,45 @@ nav li.tab a:hover {
   width: 300px;
   margin: 0 auto;
 }
-#info-container div {
+#info-container > div {
+  text-align: center;
+}
+#info-container #info-address-phone {
   list-style-type: none;
   font-size: 1.5em;
   font-family: "Tinos", Times-Roman, serif;
   font-weight: 400;
   font-style: italic;
   text-align: center;
-  line-height: 1em;
+  line-height: 1.3em;
   color: ivory;
   text-shadow: 0px 0px 10px #a69191;
+}
+#info-container #info-social-media {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+}
+#info-container #info-social-media div {
+  height: 40px;
+  width: 40px;
+  margin: 15px;
+}
+#info-container #info-social-media #info-social-media--facebook {
+  background: url("/images/social-media-icons.svg");
+}
+#info-container #info-social-media #info-social-media--twitter {
+  background: url("/images/social-media-icons.svg") -40px 0;
+}
+#info-container #info-social-media #info-social-media--instagram {
+  background: url("/images/social-media-icons.svg") -80px 0;
 }
 
 #content-container {
@@ -7420,9 +7449,13 @@ nav li.tab a:hover {
     box-shadow: 0px 5px 15px #222222;
   }
   nav ul.menu.open-drawer {
-    height: 175px;
+    height: 150px;
     -webkit-transition: height 0.6s ease-in-out;
     transition: height 0.6s ease-in-out;
+  }
+
+  #logo-info-container {
+    margin-top: -25px;
   }
 }
 @media only screen and (min-width: 1025px) {

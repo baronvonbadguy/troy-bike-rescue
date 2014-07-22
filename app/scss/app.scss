@@ -49,7 +49,9 @@
 
 @import url(http://fonts.googleapis.com/css?family=Oswald:400,700,300|Tinos:400italic);
 
-//MIXINS
+//---------------------------------------
+//-------------M I X I N S---------------
+//---------------------------------------
 @mixin media($type) {
   @if $type == desktop {
     @media only screen and (min-width: 1025px) {
@@ -76,10 +78,13 @@
   text-align: center;
 }
 
-//VARIABLES
+//---------------------------------------
+//----------V A R I A B L E S------------
+//---------------------------------------
 $logo: "/images/troy-bike-rescue-logo.svg";
 $background: "/images/background.jpg";
 $noise: "/images/noise.png";
+$social-media-icons: "/images/social-media-icons.svg";
 $redish: #eb2424;
 $charcoal: #222222;
 $dark-redish: tint($charcoal, 20%);
@@ -98,6 +103,9 @@ html {
   }
 }
 
+//---------------------------------------
+//---------DEFAULT NAV STYLING-----------
+//---------------------------------------
 nav {
   position: absolute;
   margin-top: 10px;
@@ -138,6 +146,9 @@ nav {
   padding: 0 0;
 }
 
+//---------------------------------------
+//----------LOGO-INFO STYLING------------
+//---------------------------------------
 #logo-container {
   margin: 100px auto 25px auto;
   padding: 20px;
@@ -201,19 +212,48 @@ nav {
 #info-container {
   width: 300px;
   margin: 0 auto;
-  div {
+  & > div {
+    text-align: center;
+  }
+  #info-address-phone {
     list-style-type: none;
     font-size: 1.5em;
     font-family: "Tinos", Times-Roman, serif;
     font-weight: 400;
     font-style: italic;
     text-align: center;
-    line-height: 1em;
+    line-height: 1.3em;
     color: ivory;
     @include text-shadow(0px 0px 10px #a69191);
   }
+
+  #info-social-media {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    & div {
+      height: 40px;
+      width: 40px;
+      margin: 15px;
+    }
+
+    #info-social-media--facebook {
+      background: url($social-media-icons);
+    }
+
+    #info-social-media--twitter {
+      background: url($social-media-icons) -40px 0;
+    }
+    #info-social-media--instagram {
+      background: url($social-media-icons) -80px 0;
+    }
+  }
 }
 
+//---------------------------------------
+//------------CONTENT STYLING------------
+//---------------------------------------
 #content-container {
   margin-top: 10px;
   background-color: ivory;
@@ -254,7 +294,6 @@ nav {
 //---------------------------------------
 //---------BREAKPOINT STYLING------------
 //---------------------------------------
-
 @include media(mobile) {
   .primary {
     margin: 0 0;
@@ -329,10 +368,13 @@ nav {
         }
       }
       &.open-drawer {
-        height: 175px;
+        height: 150px;
         @include transition(height .6s ease-in-out);
       }
     }
+  }
+  #logo-info-container {
+    margin-top: -25px;
   }
 }
 

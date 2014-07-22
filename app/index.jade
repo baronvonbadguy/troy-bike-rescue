@@ -1,4 +1,4 @@
--var tabs = {'Troy Bike Rescue':'troy-bike-rescue', 'Volunteer':'volunteer', 'Get a Bike':'get-a-bike', 'Calendar':'calendar', 'Gallery':'gallery', 'About':'about', 'Shop':'shop'}
+-var tabs = {'Troy Bike Rescue':'troy-bike-rescue', 'Volunteer':'volunteer', 'Get a Bike':'get-a-bike', 'Gallery':'gallery', 'About':'about', 'Shop':'shop'}
 include content-mixin
 doctype html
 include header
@@ -18,11 +18,19 @@ html(class="no-js", lang="en")
               #logo-image
               #logo-title troy bike rescue 
             #info-container
-              #info-address 
-                li 380 6TH AVENUE
+              #info-address-phone 
+                li 3280 6TH AVENUE
                 li TROY, NY 12180
-              #info-phone 
                 li 518 - 328 - 4827
+              #info-donate-button
+                include paypal
+              #info-social-media
+                a(href="http://www.facebook.com/troybikerescue")
+                  #info-social-media--facebook
+                a(href="https://twitter.com/troybikerescue")
+                  #info-social-media--twitter
+                a(href="http://instagram.com/troybikerescue")
+                  #info-social-media--instagram
         .small-12.medium-10.large-8.small-centered.large-uncentered.large-push-4.columns
           #content-container.row
             each content_id, tab in tabs
