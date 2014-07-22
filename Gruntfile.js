@@ -175,11 +175,10 @@ module.exports = function(grunt) {
 		},
 
 		autoprefixer: {
-            dist: {
-            	single_file: {
-            		'<%= app %>/css/app.css': '<%= app %>/css/app--no-prefix.css'
-            	}
-            },
+        	single_file: {
+        		src: '<%= app %>/css/app--no-prefix.css',
+        		dest: '<%= app %>/css/app.css'
+        	},
     		options: {
   				browsers: ['last 2 version', '> 5%', 'ie 9', 'chrome 20']
 			}
