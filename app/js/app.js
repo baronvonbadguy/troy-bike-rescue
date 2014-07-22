@@ -26,6 +26,7 @@ var app = (function(document, $) {
 	$('#content-about').toggleClass('active-content');
 	$('#about').toggleClass('active-tab');
 	$('#menu-title').text($('#about').text());
+	$('#menu-title--default').toggleClass('fade-in');
 })();
 
 $(document).ready(function() {
@@ -44,9 +45,11 @@ $(document).ready(function() {
 		$('.menu').removeClass('open-drawer');
 		$('#menu-title').text($(this).text());
 		//scrolls down to the active content
-		$('html, body').animate({
-		scrollTop: $('#content-container').offset().top - $('nav').height()
-		}, 500);
+		setTimeout(function (){
+			$('html, body').animate({
+				scrollTop: $('#content-container').offset().top - $('nav').height()
+			}, 750);
+		}, 300);
 	});
 
 	//toggles the menu drawer to open when the menu button is clicked
@@ -57,6 +60,7 @@ $(document).ready(function() {
 	//the menu so that when the menu passes the content title
 	//the menu title fades in or out
 	$('#content-container').waypoint(function() {
+		$('#menu-title--default').toggleClass('fade-in');
   		$('#menu-title').toggleClass('fade-in');
 	});
 });

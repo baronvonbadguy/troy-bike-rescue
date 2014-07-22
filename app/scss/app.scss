@@ -110,7 +110,7 @@ nav {
   position: absolute;
   margin-top: 10px;
   z-index: 1;
-  #menu-title {
+  #menu-title, #menu-title--default {
     display: none;
   } 
   li.tab {
@@ -147,7 +147,7 @@ nav {
 }
 
 //---------------------------------------
-//----------LOGO-INFO STYLING------------
+//---------------LOGO STYLING------------
 //---------------------------------------
 #logo-container {
   margin: 100px auto 25px auto;
@@ -209,6 +209,9 @@ nav {
   }
 }
 
+//---------------------------------------
+//---------------INFO STYLING------------
+//---------------------------------------
 #info-container {
   width: 300px;
   margin: 0 auto;
@@ -217,7 +220,7 @@ nav {
   }
   #info-address-phone {
     list-style-type: none;
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-family: "Tinos", Times-Roman, serif;
     font-weight: 400;
     font-style: italic;
@@ -236,6 +239,8 @@ nav {
       height: 40px;
       width: 40px;
       margin: 15px;
+      border-bottom: 4px;
+      border-color: rgba(113, 18, 32, 0.6);
     }
 
     #info-social-media--facebook {
@@ -267,7 +272,7 @@ nav {
       background: $redish url($noise);
     }
     h1 {
-      text-shadow: 0px 4px 0px rgba(113, 18, 32, 0.6);
+      text-shadow: 0px 3px 0px rgba(113, 18, 32, 0.6);
       font-size: 2em;
       letter-spacing: 0.1em;
     }
@@ -305,14 +310,18 @@ nav {
     width: 100%;
     height: 50px;
     padding: 0 0;
-    background: url($noise), $charcoal; 
-    background: url($noise), linear-gradient(adjust-lightness($charcoal, 10), $charcoal);  
-    z-index:2;
+    #menu-background {
+      width: 100%;
+      height: 100%;
+      background: url($noise), $charcoal; 
+      background: url($noise), linear-gradient(adjust-lightness($charcoal, 10), $charcoal);  
+      z-index: 2;
+    }
     #menu-icon {
       &:before {
-        position: relative;
-        margin: 10px 0 0 10px;
-        float: left;
+        position: absolute;
+        top: 10px;
+        left: 10px;
         content: "\2261";
         font-size: 2em;
         color: ivory;
@@ -320,7 +329,7 @@ nav {
         z-index: 30;
       } 
     }
-    #menu-title {
+    #menu-title, #menu-title--default {
       @include oswald;
       display: inline;
       position: absolute;
@@ -331,25 +340,26 @@ nav {
       font-size: 30px;
       letter-spacing: 5px;
       opacity: 0;
-      @include transition(opacity .4s ease-in);
+      @include transition(opacity .3s ease-in-out);
       &.fade-in {
         opacity: 1;
-        @include transition(opacity .4s ease-in);
       }
     }  
     ul.menu {
       width: 100%;
-      height: 0px;
-      @include transition(height .6s ease-in-out);
+      height: 210px;
+      top: -210px;
+      transform: translate3d(0px, 50px, 0px);
+      @include transition(transform .2s ease-in-out);
       margin-left: 0px;
-      margin-top: 50px;
       position: absolute;
       overflow: hidden;
       background: url($noise), $charcoal; 
       @include box-sizing("border-box");
+      z-index: -3;
       li.tab {
         width: 100%;
-        height: 25px;
+        height: 35px;
         font-style: normal;
         @include oswald;
         @include box-sizing("border-box");
@@ -368,8 +378,8 @@ nav {
         }
       }
       &.open-drawer {
-        height: 150px;
-        @include transition(height .6s ease-in-out);
+        @include transition(transform .6s ease-in-out);
+        transform: translate3d(0px, 260px, 0px);
       }
     }
   }

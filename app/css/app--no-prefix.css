@@ -7180,7 +7180,7 @@ nav {
   margin-top: 10px;
   z-index: 1;
 }
-nav #menu-title {
+nav #menu-title, nav #menu-title--default {
   display: none;
 }
 nav li.tab {
@@ -7319,7 +7319,7 @@ nav li.tab a:hover {
 }
 #info-container #info-address-phone {
   list-style-type: none;
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-family: "Tinos", Times-Roman, serif;
   font-weight: 400;
   font-style: italic;
@@ -7338,6 +7338,8 @@ nav li.tab a:hover {
   height: 40px;
   width: 40px;
   margin: 15px;
+  border-bottom: 4px;
+  border-color: rgba(113, 18, 32, 0.6);
 }
 #info-container #info-social-media #info-social-media--facebook {
   background: url("/images/social-media-icons.svg");
@@ -7368,7 +7370,7 @@ nav li.tab a:hover {
   background: #eb2424 url("/images/noise.png");
 }
 #content-container section.content h1 {
-  text-shadow: 0px 4px 0px rgba(113, 18, 32, 0.6);
+  text-shadow: 0px 3px 0px rgba(113, 18, 32, 0.6);
   font-size: 2em;
   letter-spacing: 0.1em;
 }
@@ -7402,21 +7404,25 @@ nav li.tab a:hover {
     width: 100%;
     height: 50px;
     padding: 0 0;
+  }
+  nav #menu-background {
+    width: 100%;
+    height: 100%;
     background: url("/images/noise.png"), #222222;
     background: url("/images/noise.png"), linear-gradient(#3c3c3c, #222222);
     z-index: 2;
   }
   nav #menu-icon:before {
-    position: relative;
-    margin: 10px 0 0 10px;
-    float: left;
+    position: absolute;
+    top: 10px;
+    left: 10px;
     content: "\2261";
     font-size: 2em;
     color: ivory;
     cursor: pointer;
     z-index: 30;
   }
-  nav #menu-title {
+  nav #menu-title, nav #menu-title--default {
     color: ivory;
     font-family: "Oswald", Arial, sans-serif;
     font-weight: 400;
@@ -7431,37 +7437,35 @@ nav li.tab a:hover {
     font-size: 30px;
     letter-spacing: 5px;
     opacity: 0;
-    -webkit-transition: opacity 0.4s ease-in;
-    -moz-transition: opacity 0.4s ease-in;
-    -o-transition: opacity 0.4s ease-in;
-    transition: opacity 0.4s ease-in;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
   }
-  nav #menu-title.fade-in {
+  nav #menu-title.fade-in, nav #menu-title--default.fade-in {
     opacity: 1;
-    -webkit-transition: opacity 0.4s ease-in;
-    -moz-transition: opacity 0.4s ease-in;
-    -o-transition: opacity 0.4s ease-in;
-    transition: opacity 0.4s ease-in;
   }
   nav ul.menu {
     width: 100%;
-    height: 0px;
-    -webkit-transition: height 0.6s ease-in-out;
-    -moz-transition: height 0.6s ease-in-out;
-    -o-transition: height 0.6s ease-in-out;
-    transition: height 0.6s ease-in-out;
+    height: 210px;
+    top: -210px;
+    transform: translate3d(0px, 50px, 0px);
+    -webkit-transition: -webkit-transform 0.2s ease-in-out;
+    -moz-transition: -moz-transform 0.2s ease-in-out;
+    -o-transition: -o-transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out;
     margin-left: 0px;
-    margin-top: 50px;
     position: absolute;
     overflow: hidden;
     background: url("/images/noise.png"), #222222;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    z-index: -3;
   }
   nav ul.menu li.tab {
     width: 100%;
-    height: 25px;
+    height: 35px;
     font-style: normal;
     color: ivory;
     font-family: "Oswald", Arial, sans-serif;
@@ -7486,11 +7490,11 @@ nav li.tab a:hover {
     box-shadow: 0px 5px 15px #222222;
   }
   nav ul.menu.open-drawer {
-    height: 150px;
-    -webkit-transition: height 0.6s ease-in-out;
-    -moz-transition: height 0.6s ease-in-out;
-    -o-transition: height 0.6s ease-in-out;
-    transition: height 0.6s ease-in-out;
+    -webkit-transition: -webkit-transform 0.6s ease-in-out;
+    -moz-transition: -moz-transform 0.6s ease-in-out;
+    -o-transition: -o-transform 0.6s ease-in-out;
+    transition: transform 0.6s ease-in-out;
+    transform: translate3d(0px, 260px, 0px);
   }
 
   #logo-info-container {
