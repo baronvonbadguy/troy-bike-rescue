@@ -36,7 +36,7 @@ module.exports = function(grunt) {
 				files: [{
 					expand: true,
 					cwd: '<%= app %>/',
-					src: ['**/*.jade', '!**/content-mixin.jade', '!**/paypal.jade', '!**/header.jade', '!**/footer.jade'],
+					src: ['index.jade'],
 					ext: '.html',
 					dest: '<%= app %>/'
 				}]
@@ -95,14 +95,14 @@ module.exports = function(grunt) {
 		},
 
 		useminPrepare: {
-			html: ['<%= app %>/index.html'],
+			html: ['<%= app %>/*.html'],
 			options: {
 				dest: '<%= dist %>'
 			}
 		},
 
 		usemin: {
-			html: ['<%= dist %>/**/index.html', '!<%= app %>/bower_components/**'],
+			html: ['<%= dist %>/**/*.html', '!<%= app %>/bower_components/**'],
 			css: ['<%= dist %>/css/app.css'],
 			options: {
 				dirs: ['<%= dist %>']
