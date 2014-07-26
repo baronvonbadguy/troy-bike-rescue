@@ -22,36 +22,45 @@ var app = (function(document, $) {
 	'use strict';
 	app.init();
 
-	//initializes with the about content active
-	$('#content-about').toggleClass('active-content');
-	$('#about').toggleClass('active-tab');
-	$('#menu-title').text($('#about').text());
+	//initializes with the menu title visible on mobile
 	$('#menu-title--default').toggleClass('fade-in');
 })();
+function switchToContent(contentID, delay) {
+	'use strict';
 
+	if (contentID !== 'troy-bike-rescue') {
+		$('#logo-info-container').parent().addClass('large-uncentered');
+	}
+	else {
+		$('#logo-info-container').parent().removeClass('large-uncentered');
+	}
+	//unselects all other tabs and content
+	$('.active-tab').toggleClass('active-tab');
+	$('.active-content').toggleClass('active-content');
+	//switches the content when a new tab is clicked
+	//matches content id with tab id
+	$('#content-' + contentID).toggleClass('active-content');
+	$('#' + contentID).toggleClass('active-tab');
+	//closes menu and sets the title to the active content title
+	$('.menu').removeClass('open-drawer');
+	$('#menu-title').text($('#' + contentID).text());
+	//scrolls down to the active content
+	setTimeout(function (){
+		$('html, body').animate({
+			scrollTop: $('#content-container').offset().top - $('nav').height()
+		}, 750);
+	}, delay);
+}
 $(document).ready(function() {
 	'use strict';
 	//when each tab is clicked it marks itself as active and marks all other tabs inactive
 	$('.tab a').click(function () {
-		//unselects all other tabs and content
-		$('.active-tab').toggleClass('active-tab');
-		$('.active-content').toggleClass('active-content');
-		//switches the content when a new tab is clicked
-		//matches content id with tab id
-		var thisID = $(this).parent().attr('id');
-		$('#content-' + thisID).toggleClass('active-content');
-		$(this).parent().toggleClass('active-tab');
-		//closes menu and sets the title to the active content title
-		$('.menu').removeClass('open-drawer');
-		$('#menu-title').text($(this).text());
-		//scrolls down to the active content
-		setTimeout(function (){
-			$('html, body').animate({
-				scrollTop: $('#content-container').offset().top - $('nav').height()
-			}, 750);
-		}, 300);
+		switchToContent($(this).parent().attr('id'), 300);
 	});
-
+	//opens the about content when the logo is clicked on
+	$('#logo-container').click(function () {
+		switchToContent('about', 0);
+	});
 	//toggles the menu drawer to open when the menu button is clicked
 	$('#menu-icon').click(function() {
 		$('.menu').toggleClass('open-drawer');

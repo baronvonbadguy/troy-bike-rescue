@@ -4,7 +4,7 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-@import url(http://fonts.googleapis.com/css?family=Oswald:400,700,300|Tinos:400italic);
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,700|Tinos:400italic|Droid+Serif:400);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -7179,6 +7179,7 @@ nav {
   position: absolute;
   margin-top: 10px;
   z-index: 1;
+  width: 100%;
 }
 nav #menu-title, nav #menu-title--default {
   display: none;
@@ -7187,16 +7188,10 @@ nav li.tab {
   font-family: Tinos, Times-Roman, serif;
   font-weight: 400;
   font-style: italic;
-  font-size: 1.05em;
+  font-size: 1.1em;
   list-style: none;
-}
-nav li.tab.active-tab a {
-  color: #eb2424;
-  margin-left: 20px;
-  -webkit-transition: margin-left 0.3s ease-in-out;
-  -moz-transition: margin-left 0.3s ease-in-out;
-  -o-transition: margin-left 0.3s ease-in-out;
-  transition: margin-left 0.3s ease-in-out;
+  text-align: center;
+  width: 20%;
 }
 nav li.tab a {
   color: ivory;
@@ -7204,10 +7199,6 @@ nav li.tab a {
   line-height: 1.5em;
   text-decoration: none;
   text-transform: uppercase;
-  -webkit-transition: margin-left 0.3s ease-in-out;
-  -moz-transition: margin-left 0.3s ease-in-out;
-  -o-transition: margin-left 0.3s ease-in-out;
-  transition: margin-left 0.3s ease-in-out;
 }
 nav li.tab a:hover {
   color: #eb2424;
@@ -7216,6 +7207,9 @@ nav li.tab a:hover {
   -o-transition: color 0.5s ease-in-out;
   transition: color 0.5s ease-in-out;
 }
+nav li.tab.active-tab a {
+  color: #eb2424;
+}
 
 .columns {
   padding: 0 0;
@@ -7223,11 +7217,14 @@ nav li.tab a:hover {
 
 #logo-container {
   margin: 100px auto 25px auto;
-  padding: 20px;
+  padding: 0px 20px;
   background: #eb2424 url("/images/noise.png");
   display: flex;
   flex-direction: column;
-  text-shadow: 0px 2px 0px rgba(113, 18, 32, 0.6);
+  text-shadow: 0px 4px 0px rgba(113, 18, 32, 0.6);
+}
+#logo-container:hover {
+  cursor: pointer;
 }
 @media only screen and (max-width: 640px) {
   #logo-container {
@@ -7274,8 +7271,9 @@ nav li.tab a:hover {
   }
 }
 #logo-container #logo-image {
+  margin-top: 0;
   height: 75%;
-  max-width: 75%;
+  width: 75%;
   margin: auto auto;
   content: url("/images/troy-bike-rescue-logo.svg");
 }
@@ -7289,24 +7287,27 @@ nav li.tab a:hover {
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 5px;
+  margin-bottom: 10px;
 }
 @media only screen and (max-width: 640px) {
   #logo-container #logo-title {
     font-size: 1.3em;
     line-height: 1.2em;
+    margin-bottom: 0px;
+    margin-top: 10px;
   }
 }
 @media only screen and (min-width: 641px) {
   #logo-container #logo-title {
-    font-size: 1.3em;
+    font-size: 1.8em;
+    line-height: 1.3em;
   }
 }
 @media only screen and (min-width: 1025px) {
   #logo-container #logo-title {
     text-shadow: 0px 4px 0px rgba(113, 18, 32, 0.6);
-    font-size: 1.5em;
-    font-weight: 700;
-    line-height: 1em;
+    font-size: 2em;
+    line-height: 1.2em;
   }
 }
 
@@ -7387,6 +7388,7 @@ nav li.tab a:hover {
 }
 #content-container section.content p {
   padding: 0px 10px;
+  font-family: 'Droid Serif';
 }
 #content-container section.content.active-content {
   display: block;
@@ -7400,6 +7402,7 @@ nav li.tab a:hover {
 
   nav {
     position: fixed;
+    display: block;
     margin-top: 0;
     width: 100%;
     height: 50px;
@@ -7447,8 +7450,8 @@ nav li.tab a:hover {
   }
   nav ul.menu {
     width: 100%;
-    height: 210px;
-    top: -210px;
+    height: 175px;
+    top: -175px;
     transform: translate3d(0px, 50px, 0px);
     -webkit-transition: -webkit-transform 0.2s ease-in-out;
     -moz-transition: -moz-transform 0.2s ease-in-out;
@@ -7494,7 +7497,7 @@ nav li.tab a:hover {
     -moz-transition: -moz-transform 0.6s ease-in-out;
     -o-transition: -o-transform 0.6s ease-in-out;
     transition: transform 0.6s ease-in-out;
-    transform: translate3d(0px, 260px, 0px);
+    transform: translate3d(0px, 225px, 0px);
   }
 
   #logo-info-container {
@@ -7525,6 +7528,7 @@ nav li.tab a:hover {
   }
   nav ul li {
     margin: 0 auto;
+    font-size: 2em;
   }
 
   #logo-info-container {

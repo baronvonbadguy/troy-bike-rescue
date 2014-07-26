@@ -1,4 +1,4 @@
--var tabs = {'Troy Bike Rescue':'troy-bike-rescue', 'Volunteer':'volunteer', 'Get a Bike':'get-a-bike', 'Gallery':'gallery', 'About':'about', 'Blog':'blog'}
+-var tabs = {'Troy Bike Rescue':'troy-bike-rescue', 'Volunteer':'volunteer', 'Get a Bike':'get-a-bike', 'Gallery':'gallery', 'About':'about'}
 include content-mixin
 doctype html
 include header
@@ -14,7 +14,7 @@ html(class="no-js", lang="en")
           li.tab(id=tab_id): a= tab
     .small-12.columns.primary
       .row.collapse
-        .small-12.large-4.small-centered.large-uncentered.columns
+        .small-12.large-4.small-centered.columns
           #logo-info-container
             #logo-container
               #logo-image
